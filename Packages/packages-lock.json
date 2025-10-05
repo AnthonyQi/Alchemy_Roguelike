@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.unity.2d.animation": {
       "version": "12.0.2",
       "depth": 0,
@@ -124,7 +125,7 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-      "version": "3.0.36",
+      "version": "3.0.37",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -157,6 +158,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> parent of 0c877d78 (234r234523)
     "com.unity.multiplayer.center": {
       "version": "1.0.0",
       "depth": 0,
@@ -165,6 +168,7 @@
         "com.unity.modules.uielements": "1.0.0"
       }
     },
+<<<<<<< HEAD
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.5",
       "depth": 2,
@@ -232,7 +236,7 @@
       }
     },
     "com.unity.test-framework": {
-      "version": "1.5.1",
+      "version": "1.6.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -282,6 +286,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> parent of 0c877d78 (234r234523)
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

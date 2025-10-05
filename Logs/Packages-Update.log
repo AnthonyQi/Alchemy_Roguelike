@@ -38,3 +38,12 @@ The following packages were added:
   com.unity.modules.xr@1.0.0
   com.unity.modules.accessibility@1.0.0
   com.unity.multiplayer.center@1.0.0
+
+=== Sun Oct  5 01:11:38 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ide.rider from version 3.0.36 to 3.0.37
+  com.unity.test-framework from version 1.5.1 to 1.6.0
