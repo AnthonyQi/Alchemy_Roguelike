@@ -14,18 +14,23 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 {
     private Rigidbody2D rb;
     public float speed = 5f;
+    public int maxHealth = 3;
+    private int currHealth; 
+    private Animator anim;
 
     void Start()
     {
         // Subscribes this class to the minigame manager. This gives access to the
         // 'OnMinigameStart()' and 'OnTimerEnd()' functions. Otherwise, they won't be called.
         MinigameManager.Subscribe(this);
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        currHealth = maxHealth;
     }
 
     void OnInteract(InputValue val)
-    {
-        if (!MinigameManager.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
+ {
+ if (!MinigameManager.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
             return;
 
         MinigameManager.SetStateToSuccess(); // Change the minigame state to "Success"
@@ -40,6 +45,25 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         Vector2 input = val.Get<Vector2>(); // Get the Vector2 that represents input
         rb.linearVelocity = input * speed; // 5f is a magic number; speed.
     }
+    
+    private void Die() {
+        anim.SetBool("isDead", true);
+        this.enabled = false;
+        MinigameManager.EndGame();
+    }
+
+    void TakeDamage(int amount){
+        if(anim.GetBool("isDead")) return;
+
+        currHealth -= amount;
+        anim.SetTrigger("isHit");
+
+        if(currHealth <= 0){
+            Die();
+        }
+        
+    }
+
 
     public void OnMinigameStart()
     {
@@ -51,6 +75,6 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     {
         // Timer has expired
         MinigameManager.SetStateToFailure();
-        MinigameManager.EndGame();
+        Die();
     }
 }
