@@ -27,7 +27,7 @@ public class MinigameManager : MonoBehaviour
     }
 
     [Header("You're welcome to change these fields:")]
-    [SerializeField] [Tooltip("The length of the minigame timer, in seconds")] private float minigameLength = 5f;
+    [SerializeField] [Tooltip("The length of the minigame timer, in seconds")] private float minigameLength = 10000f;
 
     void Start()
     {

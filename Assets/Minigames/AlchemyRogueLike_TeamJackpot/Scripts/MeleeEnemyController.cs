@@ -22,8 +22,9 @@ public class EnemyController : MonoBehaviour
         }
 
         float distance = Vector2.Distance(transform.position, player.position);
+        float stopDistance = 0.1f;
 
-        if(distance < 5f) {
+        if(distance < 5f && distance > stopDistance) {
             anim.SetBool("isWalking", true);
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
@@ -31,6 +32,7 @@ public class EnemyController : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
     }
+
 
     public void TakeDamage(int amount) {
         if(anim.GetBool("isDead")) return;
