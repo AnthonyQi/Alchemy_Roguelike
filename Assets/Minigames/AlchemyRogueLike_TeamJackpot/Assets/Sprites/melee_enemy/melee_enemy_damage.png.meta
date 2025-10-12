@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 21031430f2cfc4a279e96071cccb349e
+guid: 7c3a86da6299b45c98a4a498ead9ba77
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5479533815522191249
-    second: melee_enemy_0
+      213: 2275335196816050876
+    second: melee_enemy_damage_0
   - first:
-      213: -1629079831406992509
-    second: melee_enemy_1
+      213: 6684639002807097794
+    second: melee_enemy_damage_1
   - first:
-      213: 3068482019887112991
-    second: melee_enemy_2
+      213: 3935717210546624071
+    second: melee_enemy_damage_2
   - first:
-      213: -6319358641389806234
-    second: melee_enemy_3
+      213: -2769829536627177437
+    second: melee_enemy_damage_3
   - first:
-      213: 4438286795562358462
-    second: melee_enemy_4
-  - first:
-      213: -2856605595137810002
-    second: melee_enemy_5
-  - first:
-      213: 3003688081798517997
-    second: melee_enemy_6
-  - first:
-      213: -3325566021538895118
-    second: melee_enemy_7
+      213: -201854791827761925
+    second: melee_enemy_damage_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: melee_enemy_idle_0
+      name: melee_enemy_damage_0
       rect:
         serializedVersion: 2
         x: 1
@@ -134,151 +125,85 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c0c873b3547b44f4bfba3f22b4fa33a
-      internalID: 1554881109
+      spriteID: cba0a276e4d939f10800000000000000
+      internalID: 2275335196816050876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_idle_1
+      name: melee_enemy_damage_1
       rect:
         serializedVersion: 2
         x: 17
         y: 32
         width: 13
-        height: 11
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dfccf2b0e5f1442c2a86439858c685cf
-      internalID: 707036192
+      spriteID: 2c9d90e91cb94cc50800000000000000
+      internalID: 6684639002807097794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_idle_2
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 32
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faf95bb4aa6e74ddc94493321462e83e
-      internalID: -828848940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_idle_3
+      name: melee_enemy_damage_2
       rect:
         serializedVersion: 2
         x: 1
         y: 16
         width: 13
-        height: 10
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: adfc5fb6eecf1427b9b77ff77e1ab4c4
-      internalID: -1476245748
+      spriteID: 746d50f53f97e9630800000000000000
+      internalID: 3935717210546624071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_idle_4
+      name: melee_enemy_damage_3
       rect:
         serializedVersion: 2
         x: 17
         y: 16
         width: 13
-        height: 10
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 15d50f45a25be430cb8887df308ae9ce
-      internalID: -1161506168
+      spriteID: 328c3fc26b69f89d0800000000000000
+      internalID: -2769829536627177437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: melee_enemy_idle_5
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 16
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44213c4031c1b4181badd7c25027a139
-      internalID: 635229575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_idle_6
+      name: melee_enemy_damage_4
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1376779722ec74d3e8fa06a585c9f937
-      internalID: -874415519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: melee_enemy_idle_7
-      rect:
-        serializedVersion: 2
-        x: 17
         y: 0
         width: 13
         height: 12
@@ -288,10 +213,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0f3a2880e47854801a8ffdb63858e7e9
-      internalID: 541620760
+      spriteID: bf455e4e22ed23df0800000000000000
+      internalID: -201854791827761925
       vertices: []
       indices: 
       edges: []
@@ -300,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 9a8ecf18926a745bcb6f4cb9ba6b5948
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +235,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      melee_enemy_idle_0: 1554881109
-      melee_enemy_idle_1: 707036192
-      melee_enemy_idle_2: -828848940
-      melee_enemy_idle_3: -1476245748
-      melee_enemy_idle_4: -1161506168
-      melee_enemy_idle_5: 635229575
-      melee_enemy_idle_6: -874415519
-      melee_enemy_idle_7: 541620760
+      melee_enemy_damage_0: 2275335196816050876
+      melee_enemy_damage_1: 6684639002807097794
+      melee_enemy_damage_2: 3935717210546624071
+      melee_enemy_damage_3: -2769829536627177437
+      melee_enemy_damage_4: -201854791827761925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
