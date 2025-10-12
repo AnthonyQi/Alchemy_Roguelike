@@ -13,6 +13,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour, MinigameSubscriber
 {
     private Rigidbody2D rb;
+    public float speed = 5f;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
             return;
 
         Vector2 input = val.Get<Vector2>(); // Get the Vector2 that represents input
-        rb.linearVelocity = input * 5f; // 5f is a magic number; speed.
+        rb.linearVelocity = input * speed; // 5f is a magic number; speed.
     }
 
     public void OnMinigameStart()
