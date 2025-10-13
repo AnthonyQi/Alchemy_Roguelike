@@ -9,7 +9,6 @@ using UnityEngine.InputSystem;
     and use the provided MinigameManager.cs class
 */
 
-[RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class ProjController_6ix7even : MonoBehaviour
 {
