@@ -665,9 +665,9 @@ GameObject:
   - component: {fileID: 1687088310}
   - component: {fileID: 1687088314}
   - component: {fileID: 1687088317}
-  - component: {fileID: 1687088318}
   - component: {fileID: 1687088320}
   - component: {fileID: 1687088319}
+  - component: {fileID: 1687088321}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -806,20 +806,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 729215986}
---- !u!114 &1687088318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687088309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 764e2db7c6f7a4e219d9ba39b3bf5758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
-  maxHealth: 3
 --- !u!58 &1687088319
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -892,6 +878,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1687088321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687088309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764e2db7c6f7a4e219d9ba39b3bf5758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 5
+  maxHealth: 3
 --- !u!1 &1808010031
 GameObject:
   m_ObjectHideFlags: 0
