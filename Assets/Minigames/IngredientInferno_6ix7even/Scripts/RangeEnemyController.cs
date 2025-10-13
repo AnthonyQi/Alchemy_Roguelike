@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MeleeEnemyController : MonoBehaviour
+public class RangeEnemyController : MonoBehaviour
 {
     #region Instance Variables
     public float speed = 2f;
@@ -22,9 +22,9 @@ public class MeleeEnemyController : MonoBehaviour
         }
 
         float distance = Vector2.Distance(transform.position, player.position);
-        float stopDistance = 0.1f;
+        float stopDistance = 4f;
 
-        if(distance < 5f && distance > stopDistance) {
+        if(distance < 15f && distance > stopDistance) {
             anim.SetBool("isWalking", true);
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
