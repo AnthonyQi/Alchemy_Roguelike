@@ -48,8 +48,6 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
       void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("PickUp")) {
             other.gameObject.SetActive(false);
-            count = count + 1;
-            SetCountText();
         }
     }
     
@@ -63,8 +61,6 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         Destroy(gameObject);
         anim.SetBool("isDead", true);
         this.enabled = false;
-        winTextObject.gameObject.SetActive(true);
-        winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose";
         MinigameManager.EndGame();
     }
 
