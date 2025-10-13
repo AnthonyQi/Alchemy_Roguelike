@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Undefined
   - Enemy
-  - Ground
-  - Wall
-  - PickUp
-  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -45,6 +42,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 923912677
+    locked: 0
+  - name: Player
+    uniqueID: 3159532809
+    locked: 0
+  - name: Wall
+    uniqueID: 131303361
     locked: 0
   m_RenderingLayers:
   - Default
