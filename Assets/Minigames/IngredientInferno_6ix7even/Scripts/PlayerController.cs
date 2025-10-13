@@ -37,8 +37,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         MinigameManager.EndGame(); // End the minigame. Without this, the minigame would end when the timer finishes instead (still with success).
     }
 
-    void OnMove(InputValue val)
-    {
+    void OnMove(InputValue val) {
         if (!MinigameManager.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
             return;
 
@@ -46,9 +45,26 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         rb.linearVelocity = input * speed; // 5f is a magic number; speed.
     }
     
+      void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("PickUp")) {
+            other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
+        }
+    }
+    
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Enemy")) {
+            TakeDamage(1);
+        }
+    }
+
     private void Die() {
+        Destroy(gameObject);
         anim.SetBool("isDead", true);
         this.enabled = false;
+        winTextObject.gameObject.SetActive(true);
+        winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose";
         MinigameManager.EndGame();
     }
 
