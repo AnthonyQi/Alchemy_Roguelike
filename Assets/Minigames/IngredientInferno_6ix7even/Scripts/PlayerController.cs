@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
     private void Die() {
         Destroy(gameObject);
-        anim.SetBool("isDead", true);
         this.enabled = false;
         MinigameManager.EndGame();
     }
