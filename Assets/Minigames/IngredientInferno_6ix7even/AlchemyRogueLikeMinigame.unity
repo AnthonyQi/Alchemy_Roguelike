@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 223175679}
   - component: {fileID: 223175681}
   - component: {fileID: 223175680}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 223175678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.87}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -190,8 +190,8 @@ Light:
   m_GameObject: {fileID: 223175678}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
-  m_Color: {r: 1, g: 0.76640606, b: 0, a: 1}
+  m_Type: 2
+  m_Color: {r: 0.8364296, g: 0, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 10
   m_SpotAngle: 30
@@ -424,8 +424,8 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.014284447, g: 0.018642057, b: 0.028301895, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000e5c9113709a552bcc187d307
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 670610118}
   - component: {fileID: 670610120}
   - component: {fileID: 670610119}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3449,7 +3449,7 @@ GameObject:
   - component: {fileID: 729215986}
   - component: {fileID: 729215985}
   - component: {fileID: 729215988}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3585,7 +3585,7 @@ GameObject:
   - component: {fileID: 1000630122}
   - component: {fileID: 1000630124}
   - component: {fileID: 1000630123}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21103,7 +21103,7 @@ GameObject:
   - component: {fileID: 1687088320}
   - component: {fileID: 1687088319}
   - component: {fileID: 1687088321}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21437,7 +21437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487160005205561839, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6564344645821709391, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21595,7 +21595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914765326585731097, guid: 5915e8b22eccc440c85a8da7effe89fa, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21669,6 +21669,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 475398253}
   - {fileID: 1687088311}
   - {fileID: 1303806557688564901}
   - {fileID: 4979630118460560472}
@@ -21676,4 +21677,3 @@ SceneRoots:
   - {fileID: 1808010034}
   - {fileID: 4416711391948272441}
   - {fileID: 356813957}
-  - {fileID: 475398253}
