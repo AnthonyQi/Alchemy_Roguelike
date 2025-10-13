@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Wall
   - PickUp
+  - Projectile
   layers:
   - Default
   - TransparentFX
