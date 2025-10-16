@@ -191,11 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00375d6b4ba4942e3bbecc648ab6c892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeEnemyController_6ix7even
-  player: {fileID: 0}
-  projectilePrefab: {fileID: 7297937267662131953, guid: 7218b81a3a82f43a78d700c86eec54a3, type: 3}
   speed: 2
   maxHealth: 5
-  chaseRange: 15
-  attackRange: 4
-  attackCooldown: 2
+  player: {fileID: 7297937267662131953, guid: 7218b81a3a82f43a78d700c86eec54a3, type: 3}
+  projectile: {fileID: 7297937267662131953, guid: 7218b81a3a82f43a78d700c86eec54a3, type: 3}
+  fireCooldown: 2
   projectileSpeed: 20

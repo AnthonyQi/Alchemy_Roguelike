@@ -2,71 +2,50 @@ using UnityEngine;
 
 public class MeleeEnemyController_6ix7even : MonoBehaviour
 {
+    #region Instance Variables
     public float speed = 2f;
     public int maxHealth = 5;
     private int currentHealth;
     private Animator anim;
-    public GameObject player;
+    private Transform player;
+    #endregion
 
-    private Vector2 randomDir;
-    private float moveTimer;
-
-    void Start()
-    {
+    void Start() {
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        PickRandomDirection();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
-    {
-        if (anim.GetBool("isDead")) return;
+    void Update() {
+        if(anim.GetBool("isDead")){
+            return;
+        }
 
-        float distance = Vector2.Distance(transform.position, player.transform.position);
+        float distance = Vector2.Distance(transform.position, player.position);
+        float stopDistance = 0.1f;
 
-        if (distance < 5f)
-        {
+        if(distance < 5f && distance > stopDistance) {
             anim.SetBool("isWalking", true);
-            Vector2 dir = (player.transform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
-        else
-        {
-            MoveRandomly();
+        else {
+            anim.SetBool("isWalking", false);
         }
     }
 
-    void MoveRandomly()
-    {
-        anim.SetBool("isWalking", true);
-        transform.Translate(randomDir * speed * Time.deltaTime);
 
-        moveTimer -= Time.deltaTime;
-        if (moveTimer <= 0f)
-        {
-            PickRandomDirection();
-        }
-    }
-
-    void PickRandomDirection()
-    {
-        float angle = Random.Range(0f, 2f * Mathf.PI);
-        randomDir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-        moveTimer = Random.Range(0.5f, 3f);
-    }
-
-    public void TakeDamage(int amount)
-    {
-        if (anim.GetBool("isDead")) return;
+    public void TakeDamage(int amount) {
+        if(anim.GetBool("isDead")) return;
 
         currentHealth -= amount;
         anim.SetTrigger("isHit");
 
-        if (currentHealth <= 0) Die();
+        if(currentHealth <= 0) {
+            Die();
+        }
     }
 
-    void Die()
-    {
+    private void Die() {
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;

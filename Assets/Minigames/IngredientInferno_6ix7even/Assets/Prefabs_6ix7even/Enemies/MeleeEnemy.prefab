@@ -324,8 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e965894860e4713bb4055663206392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController_6ix7even
-  player: {fileID: 0}
   speed: 2
   maxHealth: 5
-  chaseRange: 5
-  attackRange: 0.5
+  player: {fileID: 7297937267662131953, guid: 7218b81a3a82f43a78d700c86eec54a3, type: 3}

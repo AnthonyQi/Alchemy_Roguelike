@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 355072783}
   - component: {fileID: 355072782}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: EnemySpawner1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   meleeEnemyPrefab: {fileID: 3487160005205561839, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
   rangedEnemyPrefab: {fileID: 4914765326585731097, guid: 5915e8b22eccc440c85a8da7effe89fa, type: 3}
-  initialMelee: 10
-  initialRanged: 5
+  initialMelee: 5
+  initialRanged: 2
 --- !u!4 &355072783
 Transform:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 355072781}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.74269, y: -2.76869, z: 0}
+  m_LocalPosition: {x: -10, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20957,6 +20957,150 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1005900473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005900475}
+  - component: {fileID: 1005900474}
+  m_Layer: 0
+  m_Name: EnemySpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1005900474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005900473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ebbaba59a9a45c89ec32861d9f361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  meleeEnemyPrefab: {fileID: 3487160005205561839, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
+  rangedEnemyPrefab: {fileID: 4914765326585731097, guid: 5915e8b22eccc440c85a8da7effe89fa, type: 3}
+  initialMelee: 5
+  initialRanged: 2
+--- !u!4 &1005900475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005900473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270442663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270442665}
+  - component: {fileID: 1270442664}
+  m_Layer: 0
+  m_Name: EnemySpawner3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1270442664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270442663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ebbaba59a9a45c89ec32861d9f361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  meleeEnemyPrefab: {fileID: 3487160005205561839, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
+  rangedEnemyPrefab: {fileID: 4914765326585731097, guid: 5915e8b22eccc440c85a8da7effe89fa, type: 3}
+  initialMelee: 10
+  initialRanged: 5
+--- !u!4 &1270442665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270442663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1411486386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411486388}
+  - component: {fileID: 1411486387}
+  m_Layer: 0
+  m_Name: EnemySpawner4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1411486387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411486386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ebbaba59a9a45c89ec32861d9f361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  meleeEnemyPrefab: {fileID: 3487160005205561839, guid: 2f87a31b30a834143a8e2f7fee8f64cd, type: 3}
+  rangedEnemyPrefab: {fileID: 4914765326585731097, guid: 5915e8b22eccc440c85a8da7effe89fa, type: 3}
+  initialMelee: 10
+  initialRanged: 5
+--- !u!4 &1411486388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411486386}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687088309
 GameObject:
   m_ObjectHideFlags: 0
@@ -21082,7 +21226,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1687088317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21245,7 +21389,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -21370,7 +21514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1687088309}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1808010034
@@ -21455,3 +21599,6 @@ SceneRoots:
   - {fileID: 1808010034}
   - {fileID: 356813957}
   - {fileID: 355072783}
+  - {fileID: 1005900475}
+  - {fileID: 1270442665}
+  - {fileID: 1411486388}
