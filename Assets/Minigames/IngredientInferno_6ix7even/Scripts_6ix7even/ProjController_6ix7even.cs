@@ -11,15 +11,15 @@ public class ProjController_6ix7even : MonoBehaviour
 
     private float lastFireTime = 0f;
 
-    void Update() 
+    void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame) 
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Fire();
         }
     }
 
-    void Fire() 
+    void Fire()
     {
         if (Time.time - lastFireTime < atkSpeed) return;
         lastFireTime = Time.time;
@@ -40,5 +40,10 @@ public class ProjController_6ix7even : MonoBehaviour
 
         SpriteRenderer sr = fireball.GetComponent<SpriteRenderer>();
         if (sr != null) sr.enabled = true;
+        if ((lastFireTime + 5f) == Time.time)
+        {
+            Destroy(gameObject);
+        }
     }
 }
+
