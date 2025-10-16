@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))] // This component must be attached to the GameObject for input to register
-public class PlayerController : MonoBehaviour, MinigameSubscriber
+public class PlayerController_6ix7even : MonoBehaviour, MinigameSubscriber
 {
     #region Instance Variables
     private Rigidbody2D rb;
