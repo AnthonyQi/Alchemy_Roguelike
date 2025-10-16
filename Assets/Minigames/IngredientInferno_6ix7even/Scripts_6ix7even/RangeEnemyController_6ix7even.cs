@@ -2,50 +2,92 @@ using UnityEngine;
 
 public class RangeEnemyController_6ix7even : MonoBehaviour
 {
-    #region Instance Variables
     public float speed = 2f;
     public int maxHealth = 5;
     private int currentHealth;
     private Animator anim;
-    private Transform player;
-    #endregion
+    public GameObject player;
+    public GameObject projectile;
+    public float fireCooldown = 2f;
+    public float projectileSpeed = 15f;
 
-    void Start() {
+    private Vector2 randomDir;
+    private float moveTimer;
+    private float fireTimer;
+
+    void Start()
+    {
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        PickRandomDirection();
+        fireTimer = fireCooldown;
     }
 
-    void Update() {
-        if(anim.GetBool("isDead")){
-            return;
-        }
+    void Update()
+    {
+        if (anim.GetBool("isDead")) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
-        float stopDistance = 4f;
+        float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance < 15f && distance > stopDistance) {
+        fireTimer -= Time.deltaTime;
+
+        if (distance < 15f && distance > 4f)
+        {
             anim.SetBool("isWalking", true);
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Vector2 dir = (player.transform.position - transform.position).normalized;
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
-        else {
-            anim.SetBool("isWalking", false);
+        else
+        {
+            MoveRandomly();
+        }
+
+        if (distance <= 15f && fireTimer <= 0f)
+        {
+            Fire();
+            fireTimer = fireCooldown;
         }
     }
 
+    void MoveRandomly()
+    {
+        anim.SetBool("isWalking", true);
+        transform.Translate(randomDir * speed * Time.deltaTime);
 
-    public void TakeDamage(int amount) {
-        if(anim.GetBool("isDead")) return;
+        moveTimer -= Time.deltaTime;
+        if (moveTimer <= 0f)
+        {
+            PickRandomDirection();
+        }
+    }
+
+    void PickRandomDirection()
+    {
+        float angle = Random.Range(0f, 2f * Mathf.PI);
+        randomDir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+        moveTimer = Random.Range(0.5f, 3f);
+    }
+
+    void Fire()
+    {
+        GameObject fireball = Instantiate(projectile, transform.position, Quaternion.identity);
+        Vector2 dir = (player.transform.position - transform.position).normalized;
+        Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
+        rb.velocity = dir * projectileSpeed;
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (anim.GetBool("isDead")) return;
 
         currentHealth -= amount;
         anim.SetTrigger("isHit");
 
-        if(currentHealth <= 0) {
-            Die();
-        }
+        if (currentHealth <= 0) Die();
     }
 
-    private void Die() {
+    void Die()
+    {
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5840372321735898884}
   - component: {fileID: 4170316757543325245}
   - component: {fileID: 6796663080523627158}
-  - component: {fileID: 8827396100147644400}
   - component: {fileID: -7678656000347838852}
   - component: {fileID: -216821400870415202}
   - component: {fileID: 7335585347611343722}
+  - component: {fileID: -737195529531839196}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1135434487
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1554881109, guid: 21031430f2cfc4a279e96071cccb349e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -182,20 +182,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.40625
---- !u!114 &8827396100147644400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487160005205561839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e965894860e4713bb4055663206392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  speed: 2
-  maxHealth: 3
 --- !u!108 &-7678656000347838852
 Light:
   m_ObjectHideFlags: 0
@@ -326,3 +312,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.40625
+--- !u!114 &-737195529531839196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3487160005205561839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e965894860e4713bb4055663206392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController_6ix7even
+  player: {fileID: 0}
+  speed: 2
+  maxHealth: 5
+  chaseRange: 5
+  attackRange: 0.5

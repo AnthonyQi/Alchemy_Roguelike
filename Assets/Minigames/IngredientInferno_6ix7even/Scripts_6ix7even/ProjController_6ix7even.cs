@@ -7,10 +7,13 @@ public class ProjController_6ix7even : MonoBehaviour
     public GameObject projectile;
     public float atkSpeed = 0.5f;
     public float ballSpeed = 20f;
+    public float size = 1f;
+
+    private float lastFireTime = 0f;
 
     void Update() 
     {
-        if (Input.GetButtonDown("Fire1")) 
+        if (Mouse.current.leftButton.wasPressedThisFrame) 
         {
             Fire();
         }
@@ -18,18 +21,24 @@ public class ProjController_6ix7even : MonoBehaviour
 
     void Fire() 
     {
-        // Get mouse position in world space
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0f; // ensure z=0 for 2D
+        if (Time.time - lastFireTime < atkSpeed) return;
+        lastFireTime = Time.time;
 
-        // Instantiate the projectile at the player's position
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        mousePos.z = 0f;
+
         GameObject fireball = Instantiate(projectile, transform.position, Quaternion.identity);
+        fireball.transform.localScale = Vector3.one * size;
 
-        // Calculate direction
         Vector2 direction = (mousePos - transform.position).normalized;
 
-        // Add force
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
-        rb.AddForce(direction * ballSpeed, ForceMode2D.Impulse);
+        if (rb != null)
+        {
+            rb.AddForce(direction * ballSpeed, ForceMode2D.Impulse);
+        }
+
+        SpriteRenderer sr = fireball.GetComponent<SpriteRenderer>();
+        if (sr != null) sr.enabled = true;
     }
 }

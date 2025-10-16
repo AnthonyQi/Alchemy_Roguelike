@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2692320402383961842}
   - component: {fileID: 5588914859401807819}
   - component: {fileID: 3027185881773110112}
-  - component: {fileID: 1067658162348133894}
+  - component: {fileID: -2050277365403315242}
   m_Layer: 0
   m_Name: RangeEnemy
   m_TagString: Enemy
@@ -179,7 +179,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.40625
---- !u!114 &1067658162348133894
+--- !u!114 &-2050277365403315242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,8 +188,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4914765326585731097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e965894860e4713bb4055663206392, type: 3}
+  m_Script: {fileID: 11500000, guid: 00375d6b4ba4942e3bbecc648ab6c892, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::RangeEnemyController_6ix7even
+  player: {fileID: 0}
+  projectilePrefab: {fileID: 7297937267662131953, guid: 7218b81a3a82f43a78d700c86eec54a3, type: 3}
   speed: 2
-  maxHealth: 3
+  maxHealth: 5
+  chaseRange: 15
+  attackRange: 4
+  attackCooldown: 2
+  projectileSpeed: 20
