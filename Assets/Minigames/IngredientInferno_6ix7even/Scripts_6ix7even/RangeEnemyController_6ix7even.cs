@@ -73,7 +73,7 @@ public class RangeEnemyController_6ix7even : MonoBehaviour
         GameObject fireball = Instantiate(projectile, transform.position, Quaternion.identity);
         Vector2 dir = (player.transform.position - transform.position).normalized;
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
-        rb.velocity = dir * projectileSpeed;
+        rb.linearVelocity = dir * projectileSpeed;
     }
 
     public void TakeDamage(int amount)
